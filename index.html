@@ -12,19 +12,51 @@
   <body>
     <header>
       <nav class="nav">
-        <ul>
-          <li>Home</li>
-          <li>Events</li>
-          <li>References</li>
-          <li>Calculator</li>
+        <ul class="nav-list">
+          <li class="list-item">Home</li>
+          <li class="list-item">Events</li>
+          <li class="list-item">References</li>
+          <li class="list-item">Calculator</li>
         </ul>
       </nav>
     </header>
     <div class="container">
       <div class="cta">
-          <h1>ACFT Calculator</h1>
-
+          <h1>Maximize your Army Combat Fitness Test</h1>
+          <p>Instantly calcuate my score and improve my performance</p>
+          <button class="btn-hero"> Calcuate my score </button>
       </div>
+      <section id="cal" class="caculator-section">
+        <div class="btn-group">
+          <button class="btn-gender">
+            Female
+          </button>
+          <button class="btn-gender">
+            Male
+          </button>
+
+          <label for="age-group">AGE Group:</label>
+
+          <select name="age-group" id="cars">
+            <option value="17-21">17-21</option>
+            <option value="22-26">22-26</option>
+            <option value="27-31">27-31</option>
+            <option value="32-36">32-36</option>
+            <option value="37-41">37-41</option>
+            <option value="42-46">42-46</option>
+            <option value="47-51">47-51</option>
+            <option value="52-56">52-56</option>
+            <option value="57-61">57-61</option>
+            <option value="62">over 62</option>
+          </select>
+        </div>
+        
+        <div id="MDL" class="form-inputs">
+          <h3>MDL 3 repeatition Maximum deadlift</h3>
+          <input type="range" name="MDL" id="MDL" min="0" max="100">
+          <p class="points">0 :Points</p>
+        </div>
+      </section>
       
     </div>
     <script src="app.js"></script>
