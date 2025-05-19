@@ -20,6 +20,7 @@
         </ul>
       </nav>
     </header>
+    <article>
     <div class="container">
       <div class="cta">
           <h1>Maximize your Army Combat Fitness Test</h1>
@@ -53,24 +54,55 @@
         <!--MDL section-->
         <div id="MDL" class="form-inputs">
           <h3>MDL 3 repeatition Maximum deadlift</h3>
-          <input type="range" name="MDL" id="MDL" min="0" max="100">
+          <input type="range" name="MDL" id="MDL-int" min="0" max="100">
           <p class="points">0 :Points</p>
         </div>
         <!--SPT-->
         <div id="SPT" class="form-inputs">
           <h3>SPT Standing Power Throw</h3>
-          <input type="range" name="MDL" id="MDL" min="0" max="100">
+          <input type="range" name="Standing-throw" id="SPT-int" min="0" max="100">
           <p class="points">0 :Points</p>
         </div>
         <!--HRP-->
         <div id="HRP" class="form-inputs">
           <h3>HRP Hand Release Push ups</h3>
+          <input type="range" name="HRP" id="HRP" min="0" max="100">
+          <p class="points">0 :Points</p>
+        </div>
+        <!--SDC-->
+        <div id="SDC" class="form-inputs">
+          <h3>SDC Sprint Drag Carry</h3>
           <input type="range" name="MDL" id="MDL" min="0" max="100">
           <p class="points">0 :Points</p>
         </div>
+        <!--Plank-->
+        <div id="PLK" class="form-inputs">
+          <h3>PLK Plank</h3>
+          <input type="range" name="Plank" id="PLK-int" min="0" max="100">
+          <p class="points">0 :Points</p>
+        </div>
+        <!--2MR-->
+        <div id="2MR" class="form-inputs">
+          <h3>2MR 2 mile run</h3>
+          <input type="range" name="2MR" id="2MR-int" min="0" max="100">
+          <p class="points">0 :Points</p>
+        </div>
+
+        
+        <div class="total-group ">
+          <div class="totals">
+
+          </div>
+          <div class="status">
+            <h3>Passed|Failed</h3>
+            <p>category: Gold 60% |Gray 4evts 80|Black 80%</p>
+          </div>
+        </div>
+
       </section>
       
     </div>
+    </article>
     <script src="app.js"></script>
   </body>
 </html>
