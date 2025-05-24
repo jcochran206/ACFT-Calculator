@@ -1,0 +1,45 @@
+/* global variables */
+:root {
+    --primary-color: #FFB22C;
+    --secondary-color: #333333;
+    --primary-text: #000000;
+    --secondary-text: #F7F7F7;
+    --accent-color: #D4C9BE;
+    --secondary-accent-color: #eee333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: var();
+  color: var();
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+
+/* Navigation */
+#nav ul{
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    background-color: #000000;
+}
+
+#nav a {
+    text-decoration: none;
+    color: var(--secondary-text);
+}
+
+#nav a:hover {
+    color: var(--secondary-accent-color);
+}
+
+/*articles and sections*/
+
+/*footer*/
