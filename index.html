@@ -30,33 +30,33 @@
       </div>
       <section id="cal" class="caculator-section">
         <div class="btn-group">
-          <button class="btn-gender">
+          <button id="female" class="btn-gender">
             Female
           </button>
-          <button class="btn-gender">
+          <button id="male" class="btn-gender">
             Male
           </button>
 
           <label for="age-group">AGE Group:</label>
 
-          <select name="age-group" id="cars">
-            <option value="17-21">17-21</option>
-            <option value="22-26">22-26</option>
-            <option value="27-31">27-31</option>
-            <option value="32-36">32-36</option>
-            <option value="37-41">37-41</option>
-            <option value="42-46">42-46</option>
-            <option value="47-51">47-51</option>
-            <option value="52-56">52-56</option>
-            <option value="57-61">57-61</option>
+          <select name="age-group" id="ages">
+            <option value="21">17-21</option>
+            <option value="26">22-26</option>
+            <option value="31">27-31</option>
+            <option value="36">32-36</option>
+            <option value="41">37-41</option>
+            <option value="46">42-46</option>
+            <option value="51">47-51</option>
+            <option value="56">52-56</option>
+            <option value="61">57-61</option>
             <option value="62">over 62</option>
           </select>
         </div>
         <!--MDL section-->
         <div id="MDL" class="form-inputs">
           <h3>MDL 3 repeatition Maximum deadlift</h3>
-          <input type="range" name="MDL" id="MDL-int" min="0" max="100">
-          <p class="points">0 :Points</p>
+          <input type="range" name="MDL" id="MDL-int" min="0" max="100" value="60">
+          <p id="MDLP" class="mdlpoints"> 50 </p>
         </div>
         <!--SPT-->
         <div id="SPT" class="form-inputs">
