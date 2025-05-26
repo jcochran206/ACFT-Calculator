@@ -1,43 +1,21 @@
-/*
-actions desired for the application are:  
+/* actions desired for the application are:  
 - create a dynamic navigation in JS 
 - calculate scores based on age and gender for each event
-- listen to events and display values to users
-*/
-//event listeners and dom elements  
+- listen to events and display values to users */
+
+// Event listeners and DOM elements
 const femaleBtn = document.getElementById('female');
 const maleBtn = document.getElementById('male');
-
-let mdlSlider = document.getElementById("MDL-int");
-let mdlValue = document.getElementById("MDLP");
+const ageSelect = document.getElementById('ages');
+const mdlSlider = document.getElementById("MDL-int");
+const mdlWeight = document.getElementById("MDLW");
+const mdlPoints = document.getElementById("MDLP");
 
 const navElement = document.getElementById("nav");
 const ulElement = document.createElement("ul");
 
-//set inital values 
-mdlScore(mdlSlider.value);
-
-//listeners 
-femaleBtn.addEventListener('click', function (){
-    alert('female btn pressed')
-});
-
-maleBtn.addEventListener('click', function (){
-    alert('male btn pressed')
-});
-
-// selectAge.addEventListener("input", function() {
-    
-// })
-
-mdlSlider.addEventListener('input', function(){
-    mdlValue.textContent = this.value;
-});
-
-//functions 
-function mdlScore(value) {
-    mdlValue.textContent = `${value} :points`; 
-}
+let selectedGender = null;
+let selectedAge = null;
 
 //data for links 
 const navLinks = [
@@ -46,6 +24,7 @@ const navLinks = [
     { text: "References", url: "pages/references" },
     { text: "Calculator", url: "/calculator" },
 ]
+
 // const score data by age and gender
 const MDLF21 = [
     {weight: "220", Score: "100"},
@@ -61,8 +40,29 @@ const MDLF21 = [
     {weight: "120", Score: "60"},
     {weight: "110", Score: "50"},
 ]
+//set inital values (mdl, spt, hrp, 2mr)
+//MDL inital input  
 
 
+
+//functions 
+function getMDLData(gender, age){
+    if (gender === 'female' && age === '21') return MDLF21;
+    return [];
+}
+
+function updateMDLScoreDisplay(weight){
+    mdlWeight.textContent = `${weight} :lbs`;
+
+    const data = getMDLData(selectedGender, selectedAge);
+    const result = data.find(entry => parseInt(entry.weight) === weight);
+    const score = result ? result.Score : "0";
+
+    mdlPoints.textContent = `${score} :points`;
+}
+
+
+//functions for link 
 navLinks.forEach(item => {
     const liElement = document.createElement("li");
     const aElement = document.createElement("a");
@@ -72,5 +72,30 @@ navLinks.forEach(item => {
     ulElement.appendChild(liElement);
 });
 
+// Button click handlers
+femaleBtn.addEventListener('click', () => {
+    selectedGender = 'female';
+    updateMDLScoreDisplay(parseInt(mdlSlider.value));
+    console.log(mdlSlider.value, selectedGender);
+});
+
+maleBtn.addEventListener('click', () => {
+    selectedGender = 'male';
+    updateMDLScoreDisplay(parseInt(mdlSlider.value));
+});
+
+// Age select change handler
+ageSelect.addEventListener('change', () => {
+    selectedAge = ageSelect.value;
+    updateMDLScoreDisplay(parseInt(mdlSlider.value));
+    console.log(selectedAge, mdlSlider.value)
+});
+
+// MDL slider input handler
+mdlSlider.addEventListener('input', function() {
+    updateMDLScoreDisplay(parseInt(this.value));
+});
+
+//callbacks
 navElement.appendChild(ulElement);
 
