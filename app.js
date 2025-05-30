@@ -10,6 +10,8 @@ const ageSelect = document.getElementById('ages');
 const mdlSlider = document.getElementById("MDL-int");
 const mdlWeight = document.getElementById("MDLW");
 const mdlPoints = document.getElementById("MDLP");
+const sptSlider = document.getElementById("SPT-int");
+const sptPoints = document.getElementById("sptPoints");
 
 const navElement = document.getElementById("nav");
 const ulElement = document.createElement("ul");
