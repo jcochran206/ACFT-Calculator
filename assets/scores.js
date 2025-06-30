@@ -41,7 +41,7 @@ const mdlData = {
         ],
         31:[
             {weight: "", Score: ""},
-            {weight: "220", Score: "98"},
+            {weight: "", Score: "98"},
             {weight: "210", Score: "97"},
             {weight: "200", Score: "95"},
             {weight: "190", Score: "94"},
